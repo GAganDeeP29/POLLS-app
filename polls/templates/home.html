@@ -1,0 +1,17 @@
+<html>
+    <body>
+        <script
+          src="http://code.jquery.com/jquery-3.2.1.min.js"
+          integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+          crossorigin="anonymous">
+        </script>
+        {% if view.show_recent %}
+            <ul>
+                {% for item in view.show_recent %}
+                    <li><a href="/question/{{item.id }}">{{ item.question_text }}</a></li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+
+    </body>
+</html>
